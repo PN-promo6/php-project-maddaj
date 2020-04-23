@@ -1,3 +1,17 @@
+/* NAVBAR */
+.nav-link{
+  color: white;
+}
+.navbar-default{
+  transition:500ms ease;
+  background:transparent;
+}
+.navbar-default.scrolled .nav-link{
+  color: black;
+}
+.navbar-default.scrolled{
+  background:white;
+}
 
 /* HEADER */
 @keyframes changeBefore {
@@ -77,10 +91,10 @@
 
 div.duotone {
   background-image:url('https://libreshot.com/wp-content/uploads/2017/11/nuclear-power-plant.jpg');
- animation-name:changeBG; 
+  animation-name:changeBG; 
   animation-duration: 30s;
   animation-iteration-count:infinite;
-   background-attachment: fixed;
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
 }
