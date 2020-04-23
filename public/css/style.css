@@ -1,7 +1,11 @@
 /* NAVBAR */
-.nav-link{
+.nav-item {
+  padding: 0 30px;
+  font-family: 'Lexend Giga', sans-serif;
   color: white;
+  font-size: large;
 }
+
 .navbar-default{
   transition:500ms ease;
   background:transparent;
@@ -33,7 +37,7 @@
 }
 
 .fullpage {
-    display:flex;
+  display:flex;
   align-items:center;
   justify-content:center;
   height: 100vh;
@@ -132,7 +136,7 @@ div.duotone {
 
 .card__clock {
   width: 15px;
-vertical-align: middle;
+  vertical-align: middle;
   fill: #AD7D52;
 }
 .card__time {
@@ -147,27 +151,27 @@ vertical-align: middle;
 }
 
 .card__img {
-visibility: hidden;
+  visibility: hidden;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   height: 235px;
-border-top-left-radius: 12px;
-border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 
 }
 
 .card__info-hover {
   position: absolute;
   padding: 16px;
-width: 100%;
-opacity: 0;
-top: 0;
+  width: 100%;
+  opacity: 0;
+  top: 0;
 }
 
 .card__img--hover {
-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -178,24 +182,24 @@ transition: 0.2s all ease-out;
 
 }
 .card {
-margin-right: 25px;
-transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
-background-color: #fff;
-width: 33.3%;
-position: relative;
-overflow: hidden;
+  margin-right: 25px;
+  transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #fff;
+  width: 33.3%;
+  position: relative;
+  overflow: hidden;
 }
 .card:hover {
-box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
-transform: scale(1.10, 1.10);
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
+  transform: scale(1.10, 1.10);
 }
 
 .card__info {
-z-index: 2;
-background-color: #fff;
-border-bottom-left-radius: 12px;
-border-bottom-right-radius: 12px;
-padding: 16px 24px 24px 24px;
+  z-index: 2;
+  background-color: #fff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 16px 24px 24px 24px;
 }
 
 .card__category {
@@ -222,10 +226,9 @@ padding: 16px 24px 24px 24px;
 .card__author {
   font-weight: 600;
   text-decoration: none;
-  
   background: linear-gradient(to right, #009fff, #ec2f4b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .card:hover .card__img--hover {

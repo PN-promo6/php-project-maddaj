@@ -1,3 +1,28 @@
+<?php
+
+require("../vendor/autoload.php");
+
+use Entity\Article;
+use Entity\User;
+
+$usr1 = new User();
+$usr1->id = 1;
+$usr1->nickname = "toto";
+$usr1->password = "eeeee";
+$usr1->email = "toto@gmail.com";
+$usr1->website = "http://www.toto.com";
+
+$art1 = new Article();
+$art1->id = 1;
+$art1->main_color = "#cccccc";
+$art1->size = "50x60";
+$art1->url_image = "https://desenio.fr/bilder/artiklar/zoom/pre0004_5.jpg";
+$art1->category = "tableau";
+$art1->user = $usr1;
+
+$articles = array($art1);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +35,7 @@
     <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
     <script src="js/script.js"></script>
     <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
@@ -61,7 +86,7 @@
                         <span class="card__by">by <a href="#" class="card__author" title="author">Username</a></span>
                     </div>
                 </article>
-                <article class="card card--2">
+                <!-- <article class="card card--2">
                     <div class="card__img"></div>
                     <a href="#" class="card_link">
                         <div class="card__img--hover"></div>
@@ -82,7 +107,7 @@
                         <h3 class="card__title">Text</h3>
                         <span class="card__by">by <a href="#" class="card__author" title="author">Username</a></span>
                     </div>
-                </article>
+                </article> -->
 
             </div>
         </div>

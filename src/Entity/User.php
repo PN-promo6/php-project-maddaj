@@ -9,8 +9,4 @@ class User
     public $password;
     public $email;
     public $website;
-
-    public function __construct()
-    {
-    }
 }
