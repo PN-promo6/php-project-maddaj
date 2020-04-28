@@ -20,7 +20,7 @@ $art1->url_image = "https://desenio.fr/bilder/artiklar/zoom/pre0004_5.jpg";
 $art1->category = "tableau";
 $art1->user = $usr1;
 
-$articles = array($art1);
+$articles = array($art1, $art1, $art1, $art1);
 
 ?>
 <!DOCTYPE html>
@@ -75,17 +75,28 @@ $articles = array($art1);
         <h2>Nouveautés</h2>
         <div class="row">
             <div class="col-md-9 d-flex mx-auto">
-                <article class="card card--1">
-                    <div class="card__img"></div>
-                    <a href="#" class="card_link">
-                        <div class="card__img--hover"></div>
-                    </a>
-                    <div class="card__info">
-                        <span class="card__category">Catégories</span>
-                        <h3 class="card__title">Text</h3>
-                        <span class="card__by">by <a href="#" class="card__author" title="author">Username</a></span>
-                    </div>
-                </article>
+                <?php
+                $i = 0;
+                foreach ($articles as $oneArticle) {
+                ?>
+                    <article class="card card--1">
+                        <div class="card__img"></div>
+                        <a href="#" class="card_link">
+                            <div class="card__img--hover"></div>
+                        </a>
+                        <div class="card__info">
+                            <span class="card__category">Catégories</span>
+                            <h3 class="card__title">Text</h3>
+                            <span class="card__by">by <a href="#" class="card__author" title="author">Username</a></span>
+                        </div>
+                    </article>
+                <?php 
+                $i++;
+                if ($i % 3 == 0){
+                    echo ""
+                }
+                } 
+                ?>
                 <!-- <article class="card card--2">
                     <div class="card__img"></div>
                     <a href="#" class="card_link">
