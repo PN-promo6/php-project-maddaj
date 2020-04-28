@@ -130,6 +130,10 @@ div.duotone {
 }
 
 /* CARD */
+.card-row{
+  padding: 30px 0;
+}
+
 .cards {
   width: 100%;
   display: flex;
@@ -137,21 +141,6 @@ div.duotone {
   justify-content: center;
   -webkit-justify-content: center;
   max-width: 820px;
-}
-
-.card--1 .card__img,
-.card--1 .card__img--hover {
-  background-image: url('https://images.pexels.com/photos/2236960/pexels-photo-2236960.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-}
-
-.card--2 .card__img,
-.card--2 .card__img--hover {
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTNuoY4yPpcE46Zqp8R6dM37FU0k9VIDSdsg1rZoYgxLEyUYSxY&usqp=CAU');
-}
-
-.card--3 .card__img,
-.card--3 .card__img--hover {
-  background-image: url('https://images-na.ssl-images-amazon.com/images/I/91Oo7MLeVLL._AC_SL1500_.jpg');
 }
 
 .card__like {
@@ -208,10 +197,8 @@ div.duotone {
 }
 
 .card {
-  /*margin-right: 25px;*/
   transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
   background-color: #fff;
-  /*width: 33.3%;*/
   position: relative;
   overflow: hidden;
 }
