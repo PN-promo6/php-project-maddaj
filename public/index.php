@@ -3,27 +3,19 @@
 require("../vendor/autoload.php");
 
 use Entity\Article;
-use Entity\User;
+use ludk\Persistence\ORM;
 
-$usr1 = new User();
-$usr1->id = 1;
-$usr1->nickname = "Username";
-$usr1->password = "eeeee";
-$usr1->email = "toto@gmail.com";
-$usr1->website = "http://www.toto.com";
+require __DIR__ . '/../vendor/autoload.php';
+$orm = new ORM(__DIR__ . '/../Resources');
+$articleRepo = $orm->getRepository(Article::class);
 
-$art1 = new Article();
-$art1->id = 1;
-$art1->text = "lorem ipsum";
-$art1->main_color = "#cccccc";
-$art1->size = "50x60";
-$art1->url_image = "https://images.pexels.com/photos/2236960/pexels-photo-2236960.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260";
-$art1->category = "graff";
-$art1->user = $usr1;
-
-$articles = array($art1, $art1, $art1, $art1, $art1, $art1, $art1, $art1, $art1);
-
+if (isset($_GET['search'])) {
+    $articles = $articleRepo->findBy(array("text" => $_GET['search']));
+} else {
+    $articles = $articleRepo->findAll();
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,6 +58,10 @@ $articles = array($art1, $art1, $art1, $art1, $art1, $art1, $art1, $art1, $art1)
                             <a class="nav-link" href="#">Contact</a>
                         </li>
                     </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
                 </div>
             </nav>
             <h1>"La créativité est contagieuse, faites la tourner."</h1>

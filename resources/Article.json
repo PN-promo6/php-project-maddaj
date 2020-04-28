@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "text": "lorem ipsum",
+        "main_color": "#cccccc",
+        "size": "50x60",
+        "url_image": "https://images.pexels.com/photos/2236960/pexels-photo-2236960.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+        "category": "graff",
+        "user": 1
+    },
+    {
+        "id": 2,
+        "text": "toto",
+        "main_color": "#cccccc",
+        "size": "50x60",
+        "url_image": "https://images.pexels.com/photos/2235182/pexels-photo-2235182.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "graff",
+        "user": 4
+    },
+    {
+        "id": 3,
+        "text": "tutu",
+        "main_color": "#cccccc",
+        "size": "50x60",
+        "url_image": "https://images.pexels.com/photos/2236960/pexels-photo-2236960.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+        "category": "graff",
+        "user": 1
+    },
+    {
+        "id": 4,
+        "text": "lorem ipsum",
+        "main_color": "#cccccc",
+        "size": "50x60",
+        "url_image": "https://images.pexels.com/photos/2236960/pexels-photo-2236960.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+        "category": "graff",
+        "user": 1
+    },
+    {
+        "id": 5,
+        "text": "lorem ipsum",
+        "main_color": "#cccccc",
+        "size": "50x60",
+        "url_image": "https://images.pexels.com/photos/1022934/pexels-photo-1022934.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "graff",
+        "user": 5
+    },
+    {
+        "id": 6,
+        "text": "lorem ipsum",
+        "main_color": "#cccccc",
+        "size": "50x60",
+        "url_image": "https://images.pexels.com/photos/2236960/pexels-photo-2236960.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+        "category": "graff",
+        "user": 6
+    }
+]
