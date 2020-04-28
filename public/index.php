@@ -83,7 +83,7 @@ $articles = array($art1, $art1, $art1, $art1, $art1, $art1, $art1, $art1, $art1)
                     echo '</div><div class="row justify-content-around card-row">';
                 }
             ?>
-                <article class="col-md-3 card card--1 px-0">
+                <article class="col-12 col-md-3 card card--1 px-0">
                     <img class="card__img" src="<?php echo $oneArticle->url_image ?>" alt="">
                     <a href="#" class="card_link">
                         <img class="card__img--hover" src="<?php echo $oneArticle->url_image ?>" alt="">
