@@ -5,8 +5,30 @@ include 'header.php';
 <!-- MAIN -->
 <div class="main-container">
     <h2 class="d-flex justify-content-center">Nouveautés</h2>
+    <?php
+    if (isset($_SESSION['user'])) {
+        if (isset($errorMsg)) {
+            echo "<div class='alert alert-warning' role='alert'>$errorMsg</div>";
+        }
+    ?>
+        <div class="row newMsg">
+            <div class="col">
+                <form class="input-group" method="POST" action="?action=new">
+                    <input type="text" class="form-control" name="text" placeholder="Description" value="<?php echo $_POST['text'] ?? '' ?>" />
+                    <input type="url" class="form-control" name="url_image" placeholder="URL image" value="<?php echo $_POST['url_image'] ?? '' ?>" />
+                    <select class="form-control" name="category">
+                        <option value="nocategory">Please select</option>
+                        <option value="Graff">Graff</option>
+                        <option value="Sculpture">Sculpture</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    <?php
+    }
+    ?>
     <div class="row card-row">
-
         <?php
         // Take item from a table
         foreach ($articles as $oneArticle) {

@@ -7,12 +7,10 @@ use ludk\Utils\Serializer;
 
 class Article
 {
-    public  $id;
+    public $id;
     public $url_image;
     public $category;
-    public  $text;
-    public  $size;
-    public  $main_color;
+    public $text;
     public User $user;
 
     use Serializer;
