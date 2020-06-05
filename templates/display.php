@@ -1,10 +1,20 @@
 <?php
 include 'header.php';
 ?>
-
-<div class="img-header">
-    <h1>Street Art Project</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 wrap">
+            <h1>Street Art Project</h1>
+        </div>
+        <div class="col-12 col-md-6">
+            <p>MOTHER FUCKER</p>
+            <button type="button" class="btn btn-dark">Voir toutes les oeuvres</button>
+        </div>
+    </div>
 </div>
+<!-- <div class="img-header">
+    <h1>Street Art Project</h1>
+</div> -->
 
 <!-- MAIN -->
 <div class="main-container">
