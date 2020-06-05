@@ -91,7 +91,7 @@ switch ($action) {
             }
             if ($errorMsg) {
                 $articles = $articleRepo->findAll();
-                include "../templates/display.php";
+                include "../templates/addArticle.php";
             } else {
                 $newArticle = new Article();
                 $newArticle->url_image = $_POST['url_image'];
@@ -102,6 +102,8 @@ switch ($action) {
                 $manager->flush();
                 header('Location: ?action=display');
             }
+        } else {
+            include "../templates/addArticle.php";
         }
         break;
     case 'display':

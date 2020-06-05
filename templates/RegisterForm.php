@@ -1,5 +1,5 @@
 <?php
-include 'header-LoginForm.php';
+include 'header.php';
 ?>
 
 <div class="container my-5">
