@@ -8,7 +8,7 @@
         }
     ?>
         <div class="container-add">
-            <form id="contact" method="POST" action="?action=new">
+            <form id="contact" method="POST" action="/new">
                 <h3>Add my work</h3>
                 <fieldset>
                     <input type="text" class="form-control" name="text" placeholder="Description" value="<?php echo $_POST['text'] ?? '' ?>" />

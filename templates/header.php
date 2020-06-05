@@ -27,7 +27,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="?">Accueil <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/">Accueil <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
@@ -41,19 +41,19 @@
                     if (isset($_SESSION['user'])) {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="/?action=new" role="button">Add</a>
+                            <a class="nav-link" href="/new" role="button">Add</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/?action=logout" role="button">Logout</a>
+                            <a class="nav-link" href="/logout" role="button">Logout</a>
                         </li>
                     <?php
                     } else {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="/?action=login" role="button">Login</a>
+                            <a class="nav-link" href="/login" role="button">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/?action=register" role="button">Sign Up</a>
+                            <a class="nav-link" href="/register" role="button">Sign Up</a>
                         </li>
                     <?php
                     }

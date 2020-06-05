@@ -21,7 +21,7 @@ $userRepo = $orm->getRepository(User::class);
 // $oneItem->text = "newText";
 // $manager->persist($oneItem);
 
-$action = $_GET["action"] ?? "display";
+$action = $action = substr(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), 1);
 switch ($action) {
     case 'register':
         $controller = new AuthController();

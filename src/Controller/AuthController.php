@@ -21,7 +21,7 @@ class AuthController
                     include "../templates/LoginForm.php";
                 } else {
                     $_SESSION['user'] = $usersWithThisLogin[0]; //We put userObject in session
-                    header('Location:/?action=display');
+                    header('Location:/display');
                 }
             } else {
                 $errorMsg = "Nickname doesn't exist.";
@@ -37,7 +37,7 @@ class AuthController
         if (isset($_SESSION['user'])) {
             unset($_SESSION['user']);
         }
-        header('Location: ?action=display');
+        header('Location:/display');
     }
 
     public function register()
@@ -71,7 +71,7 @@ class AuthController
                 $manager->persist($newUser);
                 $manager->flush();
                 $_SESSION['user'] = $newUser;
-                header('Location: ?action=display');
+                header('Location:/display');
             }
         } else {
             include "../templates/RegisterForm.php";

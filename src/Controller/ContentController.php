@@ -33,7 +33,7 @@ class ContentController
                 $newArticle->user = $_SESSION['user'];
                 $manager->persist($newArticle);
                 $manager->flush();
-                header('Location: ?action=display');
+                header('Location:/display');
             }
         } else {
             include "../templates/addArticle.php";
