@@ -3,23 +3,26 @@
 namespace Controller;
 
 use Entity\Article;
+use ludk\Http\Request;
+use ludk\Http\Response;
+use ludk\Controller\AbstractController;
 
-class ContentController
+class ContentController extends AbstractController
 {
 
-    public function create()
+    public function create(Request $request): Response
     {
 
-        global $articleRepo;
-        global $manager;
+        $articleRepo = $this->getOrm()->getRepository(Article::class);
+        $manager = $this->getOrm()->getManager();
 
-        if (isset($_SESSION['user']) && isset($_POST['url_image']) && isset($_POST['category']) && isset($_POST['text'])) {
+        if ($request->getSession()->has('user') && $request->request->has('url_image') && $request->request->has('category') && $request->request->has('text')) {
             $errorMsg = NULL;
-            if (empty($_POST['url_image'])) {
+            if (empty($request->request->has('url_image'))) {
                 $errorMsg = "URL image is empty";
-            } else if ($_POST['category'] == 'nocategory') {
+            } else if ($request->request->has('category') == 'nocategory') {
                 $errorMsg = "Select category";
-            } else if (empty($_POST['text'])) {
+            } else if (empty($request->request->has('text'))) {
                 $errorMsg = "Missing description";
             }
             if ($errorMsg) {
@@ -27,16 +30,16 @@ class ContentController
                 include "../templates/addArticle.php";
             } else {
                 $newArticle = new Article();
-                $newArticle->url_image = $_POST['url_image'];
-                $newArticle->category = $_POST['category'];
-                $newArticle->text = $_POST['text'];
-                $newArticle->user = $_SESSION['user'];
+                $newArticle->url_image = $request->request->get('url_image');
+                $newArticle->category = $request->request->get('category');
+                $newArticle->text = $request->request->get('text');
+                $newArticle->user = $request->getSession()->get('user');
                 $manager->persist($newArticle);
                 $manager->flush();
-                header('Location:/display');
+                return $this->redirectToRoute('display');
             }
         } else {
-            include "../templates/addArticle.php";
+            return $this->render('addArticle.php');
         }
     }
 }

@@ -1,8 +1,8 @@
+{% include 'header.php' %}
+
 <div class="all">
     <?php
-    include 'header.php';
-
-    if (isset($_SESSION['user'])) {
+    if ($request->getSession()->has('user')) {
         if (isset($errorMsg)) {
             echo "<div class='alert alert-warning' role='alert'>$errorMsg</div>";
         }
@@ -28,6 +28,6 @@
 
     <?php
     }
-    include 'footer.php';
     ?>
 </div>
+{% include 'footer.php' %}

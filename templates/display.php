@@ -1,6 +1,5 @@
-<?php
-include 'header.php';
-?>
+{% include 'header.php' %}
+
 <div class="container">
     <div class="row">
         <div class="col-12 col-md-6 wrap">
@@ -45,6 +44,4 @@ include 'header.php';
     </div>
 </div>
 
-<?php
-include 'footer.php';
-?>
+{% include 'footer.php' %}
