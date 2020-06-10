@@ -61,6 +61,11 @@ a {
   border: none;
 }
 
+.text-header button:hover{
+  background: #F87797;
+  transition: 0.6s;
+}
+
 /* MAIN CONTAINER */
 .main-container {
   padding: 10% 5%;
