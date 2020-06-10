@@ -1,23 +1,18 @@
 {% include 'header.php' %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-12 col-md-6 wrap">
-            <h1>Street Art Project</h1>
-        </div>
-        <div class="col-12 col-md-6">
-            <p>MOTHER FUCKER</p>
-            <button type="button" class="btn btn-dark">Voir toutes les oeuvres</button>
+<div class="container container-header">
+    <div class="row mt-5">
+        <div class="col-12 col-md-7 img-header"></div>
+        <div class="col-12 col-md-5 text-header">
+            <h1>Discover the creations of street art culture</h1>
+            <p>Street Art Project is the leading destination for finding and presenting creative work and is home to the world's best street art artists.</p>
+            <button type="button" class="btn btn-dark">See all creations</button>
         </div>
     </div>
 </div>
-<!-- <div class="img-header">
-    <h1>Street Art Project</h1>
-</div> -->
 
 <!-- MAIN -->
 <div class="main-container">
-    <h2 class="d-flex justify-content-center">Nouveautés</h2>
     <div class="row card-row">
         <?php
         // Take item from a table
