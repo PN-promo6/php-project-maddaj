@@ -27,7 +27,7 @@ class HomeController extends AbstractController
                     $articles = $articleRepo->findBy(array("user" => $user->id));
                 }
             } else {
-                $articles = $articleRepo->findBy(array("text" => $search));
+                $articles = $articleRepo->findBy(array("text" => "%$search%"));
             }
         } else {
             $articles = $articleRepo->findAll();
