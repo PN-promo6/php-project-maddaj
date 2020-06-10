@@ -23,7 +23,7 @@ class AuthController extends AbstractController
             ); //The User class is searched for the corresponding data
             if (count($usersWithThisLogin) == 1) {
                 $firstUserWithThisLogin = $usersWithThisLogin[0];
-                if ($firstUserWithThisLogin->password != md5($request->request->has('password'))) {
+                if ($firstUserWithThisLogin->password != md5($request->request->get('password'))) {
                     $data = array(
                         "errorMsg" => "Wrong password."
                     );

@@ -2,14 +2,15 @@
 
 <div class="all">
     <?php
-    if ($request->getSession()->has('user')) {
-        if (isset($errorMsg)) {
-            echo "<div class='alert alert-warning' role='alert'>$errorMsg</div>";
-        }
+    if (isset($_SESSION['user'])) {
     ?>
         <div class="container-add">
             <form id="contact" method="POST" action="/new">
                 <h3>Add my work</h3>
+                <?php
+                if (isset($errorMsg)) {
+                    echo "<div class='alert alert-warning' role='alert'>$errorMsg</div>";
+                } ?>
                 <fieldset>
                     <input type="text" class="form-control" name="text" placeholder="Description" value="<?php echo $_POST['text'] ?? '' ?>" />
                 </fieldset>
